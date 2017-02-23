@@ -16,6 +16,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var rightView: UIView!
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var clearButton: UIButton!
+    @IBOutlet weak var leftDial: UIImageView!
+    @IBOutlet weak var rightDial: UIImageView!
+    
+    // variables for keeping track of left and right dial rotation
+    var leftDialRotation: CGFloat = 0
+    var rightDialRotation: CGFloat = 0
     
     // rotation gesture recognizers for controls
     let leftRotateRec = UIRotationGestureRecognizer()
@@ -59,6 +65,8 @@ class ViewController: UIViewController {
         }
         if(sender.state == .changed) {
             curXrot = sender.rotation
+            leftDialRotation += curXrot - lastXrot
+            leftDial.transform = CGAffineTransform(rotationAngle: leftDialRotation)
             x += (curXrot - lastXrot) * 40
             if(x < 0) {
                 x = 0
@@ -83,6 +91,8 @@ class ViewController: UIViewController {
         }
         if(sender.state == .changed) {
             curYrot = sender.rotation
+            rightDialRotation += curYrot - lastYrot
+            rightDial.transform = CGAffineTransform(rotationAngle: rightDialRotation)
             y -= (curYrot - lastYrot) * 40
             if(y < 0) {
                 y = 0

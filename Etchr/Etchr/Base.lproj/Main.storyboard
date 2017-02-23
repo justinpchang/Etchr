@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="landscape">
+    <device id="retina3_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,15 +18,15 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="igG-wS-jBu">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <view multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fa0-fU-QVR">
-                                <rect key="frame" x="0.0" y="0.0" width="333" height="375"/>
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="320"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="app-a6-jSp">
@@ -34,19 +34,27 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Clear"/>
                                     </button>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="dial" translatesAutoresizingMaskIntoConstraints="NO" id="Kix-Gv-8Lm">
+                                        <rect key="frame" x="8" y="186" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                             </view>
                             <view multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yMj-XF-G58">
-                                <rect key="frame" x="334" y="0.0" width="333" height="375"/>
+                                <rect key="frame" x="240" y="0.0" width="240" height="320"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9CM-ds-fml">
-                                        <rect key="frame" x="285" y="8" width="40" height="30"/>
+                                        <rect key="frame" x="192" y="8" width="40" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Share"/>
                                     </button>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="dial" translatesAutoresizingMaskIntoConstraints="NO" id="sUg-A8-JtJ">
+                                        <rect key="frame" x="152" y="186" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -56,7 +64,9 @@
                     <connections>
                         <outlet property="clearButton" destination="app-a6-jSp" id="DYQ-yD-usH"/>
                         <outlet property="imageView" destination="igG-wS-jBu" id="6MS-jw-omr"/>
+                        <outlet property="leftDial" destination="Kix-Gv-8Lm" id="YVP-et-6tu"/>
                         <outlet property="leftView" destination="fa0-fU-QVR" id="Chr-j9-Zhv"/>
+                        <outlet property="rightDial" destination="sUg-A8-JtJ" id="JOO-yq-FSc"/>
                         <outlet property="rightView" destination="yMj-XF-G58" id="Yhe-UT-6nX"/>
                         <outlet property="shareButton" destination="9CM-ds-fml" id="TNZ-sI-Op9"/>
                     </connections>
@@ -66,4 +76,7 @@
             <point key="canvasLocation" x="25.637181409295355" y="26.399999999999999"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dial" width="80" height="80"/>
+    </resources>
 </document>
